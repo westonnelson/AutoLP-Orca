@@ -1,0 +1,40 @@
+{
+  "name": "autolp-orca",
+  "version": "1.0.0",
+  "description": "todo",
+  "type": "module",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "print": "node dist/commands/printStatus.js",
+    "open": "node dist/commands/openPosition.js",
+    "close": "node dist/commands/closePosition.js",
+    "close-no-harvest": "node dist/commands/closePositionNoHarvest.js",
+    "create-position-bundle-nft": "node dist/commands/createPositionBundleNFT.js",
+    "deposit": "node dist/commands/deposit.js",
+    "withdraw": "node dist/commands/decreaseLiquidity.js",
+    "swap-and-deposit": "node dist/commands/swapAndDeposit.js",
+    "harvest": "node dist/commands/harvestFees.js",
+    "create-wallet": "node dist/commands/create_wallet_json.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@orca-so/common-sdk": "^0.6.0",
+    "@orca-so/whirlpools-sdk": "^0.13.3",
+    "@solana/spl-token": "^0.4.1",
+    "@solana/web3.js": "^1.95.2",
+    "axios": "^1.7.3",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0"
+  }
+}
